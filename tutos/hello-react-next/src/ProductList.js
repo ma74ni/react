@@ -10,7 +10,7 @@ class ProductList extends React.Component{
         let products = [];
 
         for(let product of this.props.products) { // Usamos la propagación desde catalog.js
-            products.push(<Product product = { product }/>); // PROPS
+            products.push(<Product product = { product } selectHandler = { this.props.selectHandler }/>); // PROPS
         }
     return <ul> { products } </ul>
     }
